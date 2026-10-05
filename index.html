@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Sistem Informasi Data Mahasiswa - Praktikum 1 – Kelas B</h1>
-        <p>ini untuk data mahasiswa</p>
-        <img src="hafni background biru.jpg" alt="ini foto hafni" width="80" height="100">
+        <p>Portal pendataan profil dan informasi akademik mahasiswa</p>
+        <img src="hafni background biru.jpg" alt="Foto Profil Hafni" width="80" height="100">
     </header>
     <hr>
     <nav>
         <ul>
             <li><a href="#informasi">Informasi Aplikasi</a></li>
-            <li><a href="daftar-mahasiswa">Daftar Mahasiswa</a></li>
-            <li><a href="form-tambah">Tambah Mahasiswa Baru</a></li>
+            <li><a href="#daftar-mahasiswa">Daftar Mahasiswa</a></li>
+            <li><a href="#form-tambah">Tambah Mahasiswa Baru</a></li>
         </ul>
     </nav>
     <hr>
@@ -24,54 +25,54 @@
     <main>
         <section id="informasi">
             <h2>Informasi Sistem</h2>
-            <p>ini adalah sistem untuk mendata mahasiswa</p>
+            <p>Sistem ini dirancang untuk memudahkan pengelolaan dan pencatatan data mahasiswa secara terpusat.</p>
             <article>
                 <h3>Fitur Utama</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam quis obcaecati quas dolorem veritatis reiciendis nulla ut, cupiditate tempora aspernatur laboriosam cum illo. At officia, quos et saepe rem doloribus?</p>
+                <p>Aplikasi ini menyediakan antarmuka responsif untuk melihat daftar mahasiswa aktif, serta menyediakan formulir registrasi yang tervalidasi untuk menambahkan data mahasiswa baru ke dalam basis data akademik.</p>
             </article>
         </section>
         <hr>
 
         <section id="daftar-mahasiswa">
             <h2>Daftar Mahasiswa Aktif</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In, est, similique aliquid deleniti ullam, maiores minus veniam corrupti esse laboriosam placeat alias fuga! Magnam quas praesentium optio ratione facere ex?</p>
+            <p>Berikut adalah senarai data mahasiswa aktif yang telah terdaftar di dalam sistem pada tahun ajaran ini. Data mencakup informasi akademik dasar dan kontak yang dapat dihubungi.</p>
             <table border="1" cellpadding="8" cellspacing="0">
                 <thead>
                     <tr>
-                        <th>no</th>
-                        <th>foto</th>
-                        <th>npm</th>
-                        <th>nama lengkap</th>
-                        <th>program studi</th>
-                        <th>angkatan</th>
-                        <th>email</th>
+                        <th>No.</th>
+                        <th>Foto</th>
+                        <th>NPM</th>
+                        <th>Nama Lengkap</th>
+                        <th>Program Studi</th>
+                        <th>Angkatan</th>
+                        <th>Email</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td><img src="flowchart.png" alt="hai" width="50" height="50"></td>
+                        <td><img src="flowchart.png" alt="Foto Hafni" width="50" height="50"></td>
                         <td>2415061061</td>
-                        <td>hafni dzaki haniyah</td>
-                        <td>teknik informatika</td>
+                        <td>Hafni Dzaki Haniyah</td>
+                        <td>Teknik Informatika</td>
                         <td>2024</td>
                         <td>hafnidzaki@mail.com</td>
                     </tr>
                     <tr>
                         <td>2</td>
-                        <td><img src="green yuri.jpg" alt="hai" width="50" height="50"></td>
+                        <td><img src="green yuri.jpg" alt="Foto Tafey" width="50" height="50"></td>
                         <td>2415061107</td>
-                        <td>tafey</td>
-                        <td>teknik informatika</td>
+                        <td>Tafey</td>
+                        <td>Teknik Informatika</td>
                         <td>2024</td>
                         <td>rafey@mail.com</td>
                     </tr>
                     <tr>
                         <td>3</td>
-                        <td><img src="block diagram.png" alt="hai" width="50" height="50"></td>
+                        <td><img src="block diagram.png" alt="Foto Jihan" width="50" height="50"></td>
                         <td>2415061072</td>
-                        <td>jihan</td>
-                        <td>teknik informatika</td>
+                        <td>Jihan</td>
+                        <td>Teknik Informatika</td>
                         <td>2024</td>
                         <td>jihan@mail.com</td>
                     </tr>
@@ -82,47 +83,47 @@
 
         <section id="form-tambah">
             <h2>Tambah Mahasiswa Baru</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fuga laboriosam sint molestiae est accusantium error, dolores, quod animi expedita praesentium deleniti autem temporibus alias repudiandae nesciunt, eius cum natus!</p>
+            <p>Silakan lengkapi formulir pendaftaran di bawah ini. Pastikan seluruh data yang dimasukkan valid dan sesuai dengan dokumen identitas resmi (KTM/KTP).</p>
             <form action="#" method="post">
                 <fieldset>
-                    <legend>TAMBAH MHS DI SINI</legend>
+                    <legend>Formulir Pendaftaran Mahasiswa</legend>
                     <p>
-                        <label for="npm">NPM</label>
+                        <label for="npm">Nomor Pokok Mahasiswa (NPM)</label>
                         <br>
-                        <input type="text" name="npm" id="npm" placeholder="contoh: 2415061061" required pattern="[0-9]{8,12}" title="npm harus berupa angka 8-12 digit">
+                        <input type="text" name="npm" id="npm" placeholder="Contoh: 2415061061" required pattern="[0-9]{8,12}" title="NPM harus berupa angka 8-12 digit">
                         <br>
-                        <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel perspiciatis suscipit sed eaque consequuntur animi quam aspernatur officiis consequatur, autem iste tempore tempora nesciunt minus nihil est rerum a doloremque?</small>
+                        <small>Pastikan NPM diisi dengan benar. NPM wajib terdiri dari 8 hingga 12 digit angka tanpa spasi atau karakter khusus.</small>
                     </p>
                     <p>
-                        <label for="nama">Nama lengkap</label>
+                        <label for="nama">Nama Lengkap</label>
                         <br>
-                        <input type="text" name="nama" id="nama" placeholder="contoh: M.Sidiq Firdaus" required minlength="3" maxlength="100">
+                        <input type="text" name="nama" id="nama" placeholder="Contoh: M. Sidiq Firdaus" required minlength="3" maxlength="100">
                         <br>
-                        <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel perspiciatis suscipit sed eaque consequuntur animi quam aspernatur officiis consequatur, autem iste tempore tempora nesciunt minus nihil est rerum a doloremque?</small>
+                        <small>Ketikkan nama lengkap sesuai dengan dokumen resmi tanpa menggunakan singkatan yang tidak perlu.</small>
                     </p>
                     <p>
-                        <label for="program_studi">program studi</label>
+                        <label for="program_studi">Program Studi</label>
                         <br>
                         <select name="program_studi" id="program_studi" required>
-                            <option value="">pilih lah prodimu</option>
-                            <option value="Teknik informatika"> Teknik Informatika</option>
+                            <option value="">-- Pilih Program Studi --</option>
+                            <option value="Teknik Informatika">Teknik Informatika</option>
                         </select>
                         <br>
-                        <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel perspiciatis suscipit sed eaque consequuntur animi quam aspernatur officiis consequatur, autem iste tempore tempora nesciunt minus nihil est rerum a doloremque?</small>
+                        <small>Pilih program studi tempat mahasiswa bernaung saat ini dari menu *dropdown* yang tersedia.</small>
                     </p>
                     <p>
                         <label for="angkatan">Tahun Angkatan</label>
                         <br>
-                        <input type="number" name="angkatan" id="angkatan" placeholder="contoh: 2024" required min="2018" max="2026">
+                        <input type="number" name="angkatan" id="angkatan" placeholder="Contoh: 2024" required min="2018" max="2026">
                         <br>
-                        <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel perspiciatis suscipit sed eaque consequuntur animi quam aspernatur officiis consequatur, autem iste tempore tempora nesciunt minus nihil est rerum a doloremque?</small>
+                        <small>Masukkan tahun masuk perkuliahan dalam format 4 digit angka (batas validasi: 2018 - 2026).</small>
                     </p>
                     <p>
                         <label for="email">Alamat Email</label>
                         <br>
-                        <input type="email" name="email" id="email" placeholder="contoh: email@example.com" required>
+                        <input type="email" name="email" id="email" placeholder="Contoh: email@example.com" required>
                         <br>
-                        <small>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel perspiciatis suscipit sed eaque consequuntur animi quam aspernatur officiis consequatur, autem iste tempore tempora nesciunt minus nihil est rerum a doloremque?</small>
+                        <small>Gunakan alamat email universitas atau email pribadi yang aktif untuk kebutuhan komunikasi dan notifikasi.</small>
                     </p>
                     <p>
                         <button type="submit">Simpan Data Mahasiswa</button>

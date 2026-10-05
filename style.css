@@ -1,0 +1,264 @@
+/* Reset & Variabel Warna (Sesuai Materi Modul) */
+:root {
+    --color-primary: #2563eb;
+    --color-primary-dark: #1e40af;
+    --color-bg: #f8fafc;
+    --color-surface: #ffffff;
+    --color-text: #0f172a;
+    --color-text-muted: #64748b;
+    --color-border: #e2e8f0;
+    --radius: 8px;
+    --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Universal Box Reset: Agar padding & border tidak merusak lebar elemen */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto; /* Memposisikan konten di tengah layar */
+}
+
+/* =========================================
+   1. HEADER & AVATAR
+   ========================================= */
+header {
+    text-align: center;
+    background-color: var(--color-surface);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+header img {
+    border-radius: 50%; /* Membuat foto profil bulat sempurna */
+    object-fit: cover; /* Mencegah gambar gepeng */
+    border: 3px solid var(--color-primary);
+    margin-top: 15px;
+}
+
+/* Menyembunyikan garis hr bawaan HTML karena kita pakai efek kotak/card */
+hr {
+    display: none; 
+}
+
+/* =========================================
+   2. NAVIGASI (Menggunakan Flexbox)
+   ========================================= */
+nav {
+    position: sticky; /* Menu menempel di atas saat discroll */
+    top: 0;
+    background-color: var(--color-surface);
+    padding: 15px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    z-index: 100; /* Agar menu selalu di atas saat menimpa elemen lain */
+}
+
+nav ul {
+    display: flex; /* Flexbox aktif */
+    justify-content: center; /* Menu di tengah */
+    gap: 20px; /* Jarak antar menu */
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-weight: bold;
+    transition: color 0.2s ease; /* Animasi pergantian warna halus */
+}
+
+nav a:hover {
+    color: var(--color-primary-dark); /* Warna saat kursor menyentuh menu */
+}
+
+/* =========================================
+   3. KOTAK KONTEN (Cards)
+   ========================================= */
+section {
+    background-color: var(--color-surface);
+    padding: 25px;
+    border-radius: var(--radius);
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: var(--color-primary-dark);
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   4. TABEL DATA MAHASISWA
+   ========================================= */
+/* Bikin tabel responsif (bisa digeser kanan-kiri di HP) tanpa ubah HTML */
+section#daftar-mahasiswa {
+    overflow-x: auto; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Menyatukan garis ganda */
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+}
+
+th {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+/* Warna selang-seling baris genap (Zebra striping) */
+tbody tr:nth-child(even) {
+    background-color: #f1f5f9;
+}
+
+/* Efek saat mouse melayang di atas baris tabel */
+tbody tr:hover {
+    background-color: #e2e8f0;
+}
+
+td img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* =========================================
+   5. FORMULIR (Menggunakan CSS Grid)
+   ========================================= */
+fieldset {
+    border: 1px solid var(--color-border);
+    padding: 20px;
+    border-radius: var(--radius);
+    margin-top: 15px;
+    
+    /* Penerapan Grid 2 Kolom untuk tampilan laptop */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: var(--color-primary);
+    padding: 0 10px;
+}
+
+/* Menyembunyikan tag <br> bawaan karena tata letak sudah diatur pakai CSS */
+fieldset br {
+    display: none;
+}
+
+/* Area tombol di setel agar mengambil lebar penuh (membentang di 2 kolom) */
+form p:last-child {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: var(--color-text);
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    font-family: var(--font-main);
+    transition: all 0.2s ease;
+}
+
+/* Indikator cincin biru saat kolom diklik/mengetik (Fokus) */
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+small {
+    display: block;
+    color: var(--color-text-muted);
+    margin-top: 5px;
+    font-size: 0.85em;
+    line-height: 1.4;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--radius);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button[type="submit"] {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px); /* Efek tombol agak naik saat disorot */
+}
+
+button[type="reset"] {
+    background-color: var(--color-border);
+    color: var(--color-text);
+}
+
+button[type="reset"]:hover {
+    background-color: var(--color-text-muted);
+    color: white;
+}
+
+/* =========================================
+   6. RESPONSIVE WEB DESIGN (Media Queries)
+   ========================================= */
+
+/* Penyesuaian untuk Tablet */
+@media (max-width: 768px) {
+    fieldset {
+        grid-template-columns: 1fr; /* Form yang tadinya 2 kolom, jadi 1 kolom turun ke bawah */
+    }
+}
+
+/* Penyesuaian untuk Layar HP / Ponsel */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column; /* Menu navigasi memanjang ke bawah */
+        align-items: center;
+        gap: 15px;
+    }
+    
+    form p:last-child {
+        flex-direction: column; /* Tombol Simpan & Reset jadi atas-bawah */
+    }
+    
+    button {
+        width: 100%; /* Tombol melebar penuh supaya gampang dipencet di HP */
+    }
+}
